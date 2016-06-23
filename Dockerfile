@@ -1,8 +1,8 @@
-FROM jpizarrom/opentripplanner:v0.18.0
+FROM jpizarrom/opentripplanner:v0.20.0
 
 RUN apt-get install -yqq unzip && curl "https://s3.amazonaws.com/aws-cli/awscli-bundle.zip" -o "awscli-bundle.zip" && unzip awscli-bundle.zip && ./awscli-bundle/install -i /usr/local/aws -b /usr/local/bin/aws
 
-ENV OTP_VERSION 0.18.0
+ENV OTP_VERSION 0.20.0
 ENV STORAGE_FLAVOR local
 
 ENV SUB_REGION south-america
